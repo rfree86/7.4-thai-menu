@@ -1,0 +1,8 @@
+present: function(){
+  return {
+    orders: order.get('orders').map((p)=>{
+      return p.toJSON();
+    }),
+    subtotal: 100
+  };
+}

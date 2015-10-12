@@ -1,22 +1,26 @@
+import order from 'models/createOrder';
 var MenuItemView = Backbone.View.extend({
-  className: 'menuItem',
+tagName: 'li',
 
-  template: JST['products/item'],
+  className: 'menu-item',
 
-  initialize: function(){
-    // this.listenTo(appRouter.comparison, 'change:products', this.renderClasses);
-  },
+  template: JST['menu/item'],
 
-  events: {
-    // 'change .js-is-compared': 'toggleCompared'
-  },
+  events:{ 'click .js_food_price': 'addToOrder',
+'click .js_order_button': 'addToOrder',},
+
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
-    this.renderClasses();
+
     return this;
   },
 
+addToOrder: function() {
+order.addOrder(this.model);
+
+  console.log(order);
+}
 
 });
 

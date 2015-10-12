@@ -1,0 +1,11 @@
+<h3 class="order_title">Order</h3>
+<hr>
+ {{#each orders}}
+<li>
+  <h6>{{title}}</h6>
+  <h6>{{price}}</h6>
+</li>
+ {{/each}}
+ <hr>
+ <h5 class="total_title">Total: ${{subtotal}}</h5>
+<button class="success" type="button" name="checkout">Checkout</button>
