@@ -19,6 +19,7 @@ render: function(){
     var view = new MenuItemView({model: menu});
     self.$el.append(view.render().el);
 
+
   });
   return this;
 },

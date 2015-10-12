@@ -15,7 +15,7 @@ meals.fetch();
  var orderItems = new CreateOrderView();
  $('#order-container').html(orderItems.render().el);
 
-
+$('#footer').html(JST.footer());
 });
 
 ////initialize in orderview

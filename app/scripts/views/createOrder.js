@@ -6,10 +6,13 @@ tagName: 'ul',
 className: "js_order_list",
 template: JST['order/collection'],
 
+events: { 'click .js_remove_button': 'removeOrder'
+},
 initialize: function() {
 
-  this.listenTo(order, 'change', this.render);
+  this.listenTo(order, 'change remove', this.render);
 },
+
 
 render: function(){
 
@@ -28,6 +31,7 @@ present: function(){
     }, 0) / 1000 + ""
   };
 }
+
 
  });
 export default CreateOrderView;
