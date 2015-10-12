@@ -61,14 +61,25 @@ right: 0;
 margin-right: 50px;
 //  border: 1px solid black;
 }
+.js_order_list{
+  width: 200px;
+}
+.js_order_list li{
+  text-align: center;
+}
 .order_title{
   text-align: center;
 }
 .total_title{
   text-align: center;
 }
+.order-item{
+  color:  #726B5F;
+  display: inline-block;
+}
 .success{
   margin: 0;
+  width: 100%;
 }
 hr{
   margin: 0;
